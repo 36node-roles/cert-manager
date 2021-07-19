@@ -16,8 +16,7 @@
     values:
       installCRDs: true
     wait: yes
-    wait_timeout: 1m
-    # wait_timeout: 12m
+    wait_timeout: 600
 
 - name: Setup alidns webhook
   community.kubernetes.k8s:
@@ -25,8 +24,7 @@
     namespace: "{{ namespace }}"
     src: alidns-webhook.yaml
     wait: yes
-    wait_timeout: 120
-    # wait_timeout: 600
+    wait_timeout: 600
 
 - name: Setup alidns secret
   community.kubernetes.k8s:
