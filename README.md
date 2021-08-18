@@ -16,3 +16,12 @@ https://cert-manager.io/docs/faq/troubleshooting/
 具体体现在 letsencrypt.yaml 文件的 solvers 一节
 
 注意：**alidns 默认是关闭的**，需要使用的话请打开，否则当外部使用 `cert_issuer: "letsencrypt-alidns"` 时，是不起作用的
+
+## Develop guide
+
+Link to local installed role for convenience.
+
+```
+rm -rf /Users/zzs/.ansible/roles/36node.cert-manager
+ln -s $PWD /Users/zzs/.ansible/roles/36node.cert-manager
+```
