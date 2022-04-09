@@ -25,3 +25,10 @@ Link to local installed role for convenience.
 rm -rf /Users/zzs/.ansible/roles/36node.cert-manager
 ln -s $PWD /Users/zzs/.ansible/roles/36node.cert-manager
 ```
+
+## cert_issuer 方式
+
+- letsencrypt-alidns
+- letsencrypt-http
+- letsencrypt-staging-alidns
+- letsencrypt-staging-http
