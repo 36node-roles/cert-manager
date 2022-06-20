@@ -4,7 +4,7 @@
 
 ## cert-manager 调试错误的流程
 
-https://cert-manager.io/docs/faq/troubleshooting/
+- [安装卡主的流程流程](https://cert-manager.io/docs/faq/troubleshooting)
 
 ## 两种域名验证方式
 
@@ -21,7 +21,7 @@ https://cert-manager.io/docs/faq/troubleshooting/
 
 Link to local installed role for convenience.
 
-```
+```bash
 rm -rf /Users/zzs/.ansible/roles/36node.cert-manager
 ln -s $PWD /Users/zzs/.ansible/roles/36node.cert-manager
 ```
