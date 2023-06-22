@@ -12,7 +12,7 @@
     namespace: "{{ namespace }}"
     create_namespace: true
     chart_ref: jetstack/cert-manager
-    chart_version: v1.8.1
+    chart_version: v1.12.2
     values:
       installCRDs: true
     wait: yes
