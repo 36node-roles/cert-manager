@@ -22,8 +22,8 @@
 Link to local installed role for convenience.
 
 ```bash
-rm -rf /Users/zzs/.ansible/roles/36node.cert-manager
-ln -s $PWD /Users/zzs/.ansible/roles/36node.cert-manager
+rm -rf ~/.ansible/roles/36node.cert-manager
+ln -s $PWD ~/.ansible/roles/36node.cert-manager
 ```
 
 ## cert_issuer 方式
