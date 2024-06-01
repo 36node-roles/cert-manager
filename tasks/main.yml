@@ -9,7 +9,7 @@
   community.kubernetes.helm:
     state: "{{ cert_manager_state }}"
     name: cert-manager
-    namespace: "{{ namespace }}"
+    namespace: "{{ cert_manager_namespace }}"
     create_namespace: true
     chart_ref: jetstack/cert-manager
     chart_version: v1.12.2
@@ -21,7 +21,7 @@
 - name: Setup alidns webhook
   community.kubernetes.k8s:
     state: "{{ cert_manager_state }}"
-    namespace: "{{ namespace }}"
+    namespace: "{{ cert_manager_namespace }}"
     src: alidns-webhook.yaml
     wait: yes
     wait_timeout: 600
@@ -29,14 +29,14 @@
 - name: Setup alidns secret
   community.kubernetes.k8s:
     state: "{{ cert_manager_state }}"
-    namespace: "{{ namespace }}"
+    namespace: "{{ cert_manager_namespace }}"
     template: alidns-secret.yaml
     wait: yes
 
 - name: Setup alidns cluster issuer
   community.kubernetes.k8s:
     state: "{{ cert_manager_state }}"
-    namespace: "{{ namespace }}"
+    namespace: "{{ cert_manager_namespace }}"
     src: letsencrypt-alidns.yaml
     wait: yes
     wait_condition:
@@ -48,7 +48,7 @@
 - name: Setup http cluster issuer
   community.kubernetes.k8s:
     state: "{{ cert_manager_state }}"
-    namespace: "{{ namespace }}"
+    namespace: "{{ cert_manager_namespace }}"
     src: letsencrypt-http.yaml
     wait: yes
     wait_condition:
@@ -59,7 +59,7 @@
 - name: Setup alidns cluster issuer for staging
   community.kubernetes.k8s:
     state: "{{ cert_manager_state }}"
-    namespace: "{{ namespace }}"
+    namespace: "{{ cert_manager_namespace }}"
     src: letsencrypt-staging-alidns.yaml
     wait: yes
     wait_condition:
@@ -71,7 +71,7 @@
 - name: Setup http cluster issuer for staging
   community.kubernetes.k8s:
     state: "{{ cert_manager_state }}"
-    namespace: "{{ namespace }}"
+    namespace: "{{ cert_manager_namespace }}"
     src: letsencrypt-staging-http.yaml
     wait: yes
     wait_condition:

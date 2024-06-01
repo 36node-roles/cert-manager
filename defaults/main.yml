@@ -1,5 +1,6 @@
 alidns_enabled: false
 cert_manager_state: present
+cert_manager_namespace: cert-manager
 
 # required if alidns_enabled=true
 ali_key: ""
